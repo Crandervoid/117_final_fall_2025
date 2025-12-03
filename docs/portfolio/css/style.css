@@ -188,14 +188,23 @@ section.visible {
     transform: translateY(0);
 }
 
+.hero-section {
+    display: contents;
+    min-height: clamp(500px, 70vh, 700px);
+}
+
 .hero-text {
-    grid-column: 1 / 8;
+    grid-column: 1 / 7;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 40px;
 }
 
 .hero-image {
-    grid-column: 7 / -1; /* Overlap effect */
-    height: clamp(450px, 55vh, 650px);
+    grid-column: 7 / -1;
+    height: clamp(500px, 70vh, 700px);
     background-color: var(--color-grey);
     display: flex;
     align-items: center;
@@ -361,8 +370,13 @@ footer {
 
 /* Responsive */
 @media (width <= 1024px) {
+    .hero-section {
+        display: block;
+    }
+
     .hero-text {
         grid-column: 1 / -1;
+        padding-right: 0;
         margin-bottom: 40px;
     }
 
