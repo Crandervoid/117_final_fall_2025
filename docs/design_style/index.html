@@ -3,59 +3,74 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>International Typographic Style</title>
-    <meta name="description" content="An educational overview of the Swiss International Style of graphic design." />
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="International Typographic Style" />
-    <meta property="og:description" content="Explore the Swiss design movement that defined modern graphic design." />
-    <meta property="og:image" content="https://placehold.co/1200x630/D40000/FFFFFF/png?text=Swiss+Style" />
-    
-    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="Explore Nordic Minimalism design principles - a comprehensive gallery showcasing Scandinavian design history, key designers, and timeless design evolution." />
+    <title>Nordic Minimalism Design Gallery</title>
+
+    <!-- Manrope – modern Scandinavian sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-    <div class="grid-wrapper">
-        <header>
-            <h1>International<br />Typographic<br />Style</h1>
-        </header>
-
-        <div class="intro">
-            <p>Also known as the Swiss Style, this graphic design movement emerged in Russia, the Netherlands, and Germany in the 1920s and was further developed by designers in Switzerland during the 1950s.</p>
+    <header class="site-header">
+        <div class="site-logo-badge">
+            <span class="logo-line">Nordic</span>
+            <span class="logo-line">Minimalism</span>
         </div>
 
-        <div class="details">
-            <div>
-                <span class="section-title">Principles</span>
-                <p>Cleanliness. Readability. Objectivity. The style emphasizes the use of a mathematical grid to structure information.</p>
-            </div>
-            <div>
-                <span class="section-title">Typography</span>
-                <p>The use of sans-serif typefaces like Akzidenz-Grotesk and Helvetica is a hallmark. Text is often flush-left, ragged-right.</p>
-            </div>
-        </div>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link nav-link--active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="timeline.html" class="nav-link">Timeline</a>
+            <a href="designers.html" class="nav-link">Designers</a>
+            <a href="collaboration.html" class="nav-link">Collaboration</a>
+        </nav>
+    </header>
 
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="images/swiss-poster-1.jpg" alt="Swiss International Style concert poster featuring bold geometric composition with red and black shapes on white background, demonstrating strict grid system and Helvetica typography by Josef Müller-Brockmann" />
-                <div class="caption">Josef Müller-Brockmann, 1955</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/swiss-poster-2.jpg" alt="High contrast black and white Swiss poster with bold asymmetric geometric shapes and dramatic shadows, exemplifying Basel School of Design modernist aesthetics by Armin Hofmann" />
-                <div class="caption">Armin Hofmann, 1959</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/swiss-poster-3.jpg" alt="Minimalist typographic composition featuring elegant Helvetica letterforms with sophisticated spacing and mathematical precision in grey and black on white, demonstrating Basel typography principles by Emil Ruder" />
-                <div class="caption">Emil Ruder, 1960</div>
-            </div>
-        </div>
+    <main class="page-main">
+        <section class="hero section">
+            <p class="eyebrow">Scandinavian Design Principles</p>
+            <h1>Welcome to Nordic Minimalism</h1>
+            <p class="hero-lead">
+                Explore the essence of Scandinavian design—calm, spacious, and rooted in nature.
+                This gallery traces how warmth, craft, and restraint shape both objects and interfaces.
+            </p>
+        </section>
 
-        <footer>
-            <p>&copy; 2025 Design History Archive. Educational purposes only.</p>
-            <p><a href="../portfolio/index.html" style="color: inherit; text-decoration: none;">&larr; Back to Portfolio</a></p>
-        </footer>
-    </div>
+        <section class="gallery-preview section">
+            <h2>Featured Content</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Design History</h3>
+                    <p>
+                        From Swiss modernism to Nordic warmth. Discover the roots of Scandinavian design
+                        philosophy and how it evolved over decades.
+                    </p>
+                </article>
 
+                <article class="card">
+                    <h3>Key Designers</h3>
+                    <p>
+                        Meet the pioneers who shaped Nordic design through thoughtful, human-centered
+                        work—across furniture, architecture, and digital products.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Design Timeline</h3>
+                    <p>
+                        Track the evolution of Nordic design from post-war Scandinavia to today’s digital
+                        interfaces and sustainable futures.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Nordic Minimalism Gallery. All rights reserved.</p>
+    </footer>
 </body>
 </html>

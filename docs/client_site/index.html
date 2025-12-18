@@ -3,113 +3,628 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1F7A46" />
-    <title>GreenLeaf Landscaping | Professional Lawn Care</title>
-    <meta name="description" content="Professional landscaping and lawn care services for residential and commercial properties. Get a free quote today." />
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="GreenLeaf Landscaping | Professional Lawn Care" />
-    <meta property="og:description" content="Your dream lawn, delivered. Professional landscaping services starting at $50/week." />
-    <meta property="og:image" content="images/og-image.jpg" />
-    
-    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="NorthRiver IT provides managed IT services for small offices - 24/7 support, network security, cloud migration, and affordable IT solutions." />
+    <title>NorthRiver IT Services – Managed IT Solutions</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                         "Helvetica Neue", Arial, sans-serif;
+            background: #ffffff;
+            color: #2d3748;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1d4ed8;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 2rem;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 5%);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #4b5563;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-back {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .nav-back:hover {
+            color: #2563eb;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgb(59 130 246 / 5%) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: drift 20s linear infinite;
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgb(37 99 235 / 25%);
+        }
+
+        .btn-secondary {
+            background: #f0f9ff;
+            color: #1e40af;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #1e40af;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Services Section */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 2.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+            transform: translateY(-4px);
+        }
+
+        .service-card p {
+            color: #4b5563;
+            line-height: 1.8;
+        }
+
+        /* Why Us Section */
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .why-us-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: #f0f9ff;
+            border-radius: 8px;
+        }
+
+        .why-us-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .why-us-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-us-content p {
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials Section */
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgb(0 0 0 / 5%);
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1e40af;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        /* CTA Section */
+
+        .cta-section {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin: 3rem auto;
+            border-radius: 12px;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #e0e7ff;
+            margin-bottom: 2rem;
+        }
+
+        /* Contact Section */
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgb(37 99 235 / 10%);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #ffffff;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgb(37 99 235 / 25%);
+        }
+
+        /* Footer */
+
+        footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: #f9fafb;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-weight: 500;
+        }
+
+        .footer-credit {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+
+        @media (width <= 640px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 3.5rem 1.5rem 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            h2 {
+                margin-bottom: 2rem;
+            }
+
+            .services-grid {
+                gap: 2rem;
+            }
+
+            .why-us-grid {
+                gap: 1.5rem;
+            }
+
+            .testimonials-grid {
+                gap: 1.5rem;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .cta-section {
+                margin: 2rem auto;
+                padding: 2.5rem 1.5rem;
+            }
+
+            .footer-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (width >= 768px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            section {
+                padding: 5rem 3rem;
+            }
+        }
+
+        @media (width >= 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
-
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">GreenLeaf.</a>
-                <a href="#quote" class="cta-button">Get a Free Quote</a>
-            </nav>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">NorthRiver IT</div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+                <a href="../" class="nav-back">← Back to Hub</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h1>Your Dream Lawn, Delivered.</h1>
-                <p>We handle the hard work so you can enjoy your weekend. Professional landscaping services starting at $50/week.</p>
-                <a href="#quote" class="cta-button">Start Your Transformation</a>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Managed IT for Small Offices</h1>
+            <p>Secure, fast, reliable. Your IT problems solved.</p>
+            <a href="#cta" class="btn btn-primary">Get a Free IT Audit</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Managed IT Support</h3>
+                <p>24/7 helpdesk support for your team. Quick response times, expert troubleshooting, and proactive system monitoring to minimize downtime.</p>
             </div>
-        </section>
+            <div class="service-card">
+                <h3>Network Security</h3>
+                <p>Protect your data with enterprise-grade firewalls, intrusion detection, and regular security audits. GDPR and compliance-ready infrastructure.</p>
+            </div>
+            <div class="service-card">
+                <h3>Cloud Migration</h3>
+                <p>Seamlessly move to cloud infrastructure. We handle setup, training, and ongoing management so your team stays productive.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section class="services-section">
-            <div class="container">
-                <h2 class="section-title">Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <img src="images/service-maintenance.jpg" alt="Professional lawn mower cutting perfectly striped green grass showing high-quality lawn maintenance service" class="service-image" />
-                        <span class="service-icon">✂️</span>
-                        <h3>Lawn Maintenance</h3>
-                        <p>Weekly mowing, edging, and cleanup to keep your yard looking pristine.</p>
-                    </div>
-                    <div class="service-card">
-                        <img src="images/service-design.jpg" alt="Beautiful garden landscape with colorful perennial flowers, modern stone pathways, and professional hardscaping design" class="service-image" />
-                        <span class="service-icon">🌿</span>
-                        <h3>Garden Design</h3>
-                        <p>Custom planting schemes and hardscaping to boost your curb appeal.</p>
-                    </div>
-                    <div class="service-card">
-                        <img src="images/service-cleanup.jpg" alt="Autumn leaves being raked on green lawn during professional fall yard cleanup service" class="service-image" />
-                        <span class="service-icon">🍂</span>
-                        <h3>Seasonal Cleanup</h3>
-                        <p>Spring and Fall cleanup services to prepare your lawn for the changing seasons.</p>
-                    </div>
+    <section id="why-us">
+        <h2>Why Choose NorthRiver?</h2>
+        <div class="why-us-grid">
+            <div class="why-us-item">
+                <div class="why-us-icon">🎯</div>
+                <div class="why-us-content">
+                    <h3>Local Expertise</h3>
+                    <p>Based in the region, we understand local business needs and provide personalized support.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Sales Funnel / Contact Form -->
-        <section id="quote" class="contact-section">
-            <div class="container">
-                <div class="form-wrapper">
-                    <h2 class="text-center mb-20">Get Your Free Estimate</h2>
-                    <p class="text-center mb-30">Fill out the form below and we'll get back to you within 24 hours.</p>
-                    
-                    <form action="https://hooks.zapier.com/hooks/catch/123456/abcdef/" method="POST" aria-label="Quote request form">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" name="service">
-                                <option value="maintenance">Weekly Maintenance</option>
-                                <option value="design">Garden Design</option>
-                                <option value="cleanup">Seasonal Cleanup</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
-                        </div>
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="privacy" name="privacy" required />
-                            <label for="privacy">I agree to the Privacy Policy.</label>
-                        </div>
-                        <button type="submit">Request Quote</button>
-                    </form>
+            <div class="why-us-item">
+                <div class="why-us-icon">⚡</div>
+                <div class="why-us-content">
+                    <h3>Fast Response</h3>
+                    <p>Average response time under 2 hours. We get your team back to work quickly.</p>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="why-us-item">
+                <div class="why-us-icon">🔒</div>
+                <div class="why-us-content">
+                    <h3>Security First</h3>
+                    <p>Enterprise-level security protocols without the enterprise price tag.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-icon">💰</div>
+                <div class="why-us-content">
+                    <h3>Affordable Plans</h3>
+                    <p>Predictable monthly pricing. No hidden fees, no surprise bills. Budget-friendly IT.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"NorthRiver eliminated our IT headaches. Their team is responsive, professional, and genuinely cares about keeping our systems running smoothly."</p>
+                <p class="testimonial-author">Sarah Mitchell</p>
+                <p class="testimonial-role">Operations Manager, Tech Startup Co.</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"After switching to NorthRiver, we cut our downtime in half. The security improvements gave us peace of mind—and that's worth every penny."</p>
+                <p class="testimonial-author">James Chen</p>
+                <p class="testimonial-role">CEO, Design Studio Ltd.</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Their IT audit identified critical gaps we didn't even know about. The recommendations were practical, and implementation was painless. Highly recommended."</p>
+                <p class="testimonial-author">Emma Rodriguez</p>
+                <p class="testimonial-role">Owner, Legal Consulting Group</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta-section">
+        <h2>Ready to Secure Your IT?</h2>
+        <p>Get a free audit and see how NorthRiver can transform your IT infrastructure.</p>
+        <a href="#contact" class="btn btn-secondary">Schedule Your Audit</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Business Name</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" />
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell Us About Your IT Needs</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Request Free Audit</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 GreenLeaf Landscaping. All rights reserved.</p>
-            <p><a href="../portfolio/index.html" style="color: inherit;">&larr; Back to Portfolio</a></p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+                <a href="../">Back to Hub</a>
+            </div>
+            <p class="footer-credit">© 2025 NorthRiver IT Services • Managed IT Solutions for Small Offices</p>
         </div>
     </footer>
-
 </body>
 </html>

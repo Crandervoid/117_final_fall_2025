@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaboration Story - Nordic Minimalism Design Gallery</title>
+
+    <!-- Manrope – modern Scandinavian sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-logo-badge">
+            <span class="logo-line">Nordic</span>
+            <span class="logo-line">Minimalism</span>
+        </div>
+
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="timeline.html" class="nav-link">Timeline</a>
+            <a href="designers.html" class="nav-link">Designers</a>
+            <a href="collaboration.html" class="nav-link nav-link--active">Collaboration</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="content">
+            <h1 class="page-title">How We Built This Gallery</h1>
+            <p class="intro">
+                A reflection on transforming a Swiss design starter into a warm, breathing Nordic Minimalism
+                space—and what it taught us about thoughtful AI-human collaboration.
+            </p>
+
+            <section class="subsection section">
+                <h2>The Initial Vision</h2>
+                <p>
+                    You chose Nordic Minimalism for a reason: it&apos;s the hardest style to get right in code.
+                    Swiss Design is all geometry and grids—mechanical precision. Nordic Minimalism looks simple
+                    but requires philosophy. It&apos;s about <em>feeling</em> first, aesthetics second. Warm where
+                    Swiss is cool. Spacious where Swiss is efficient. Human where Swiss is rational.
+                </p>
+                <p>
+                    That&apos;s what made it interesting. Not another sleek corporate site, but something that
+                    actually reflects how Scandinavian people think: <em>lagom</em>—not too much, not too little,
+                    just right.
+                </p>
+                <img src="research\references\nordic-reference-05.jpg"
+                     alt="Moodboard showing Nordic Minimalism design principles: warm colors, organic shapes, generous whitespace" />
+            </section>
+
+            <section class="subsection section">
+                <h2>Research and Strategy</h2>
+                <p>
+                    We started where all good design work starts: reading. The Nordic Minimalism style guide
+                    became our north star. Not a checklist of colors and fonts, but a philosophy—connection to
+                    nature, democracy in design, sustainability, craft over trends, human wellbeing over maximalism.
+                </p>
+                <p>
+                    From that philosophy, we derived concrete decisions: off-white backgrounds (#FAFAF9) instead
+                    of pure white to feel natural. Sage green (#8B9A8A) and warm taupe (#B4A89A) for accents—
+                    colors you&apos;d find in Scandinavian forests and stone. 18px base text with 1.7 line-height—
+                    slower, more generous reading. Humanist sans-serif stack prioritizing approachability over
+                    technical perfection.
+                </p>
+                <p>
+                    Every hex code, every rem value, every transition speed was traced back to Nordic philosophy.
+                    That constraint made decisions easier.
+                </p>
+            </section>
+
+            <section class="subsection section">
+                <h2>The Build: From Baseline to Living System</h2>
+                <p><strong>Phase 1: Homepage Foundation</strong></p>
+                <p>
+                    The homepage started as semantic HTML (header, nav, main, footer) with basic styling.
+                    But it felt corporate and sterile. Too much padding in the header. Gallery cards cramped.
+                    Shadows too harsh. Spacing inconsistent. You could see the skeleton, not the warmth.
+                </p>
+                <img src="images/home-v1.png"
+                     alt="Early version of homepage with inconsistent spacing and cold appearance" />
+                <p>
+                    We refined it five times. Reduced header padding from 4rem to 3rem—less grand, more intimate.
+                    Increased card padding to 2.5rem and gaps to 3rem. Softened shadows to barely-perceptible
+                    (0px 4px 16px with 4% opacity). Changed section gaps to 7rem—that breathing room where you feel
+                    <em>calm</em>, not bored.
+                </p>
+                <p><strong>Phase 2: Content Pages</strong></p>
+                <p>
+                    About, Timeline, Designers, Collaboration pages needed to feel cohesive with the homepage but
+                    serve different purposes. About teaches philosophy. Timeline shows evolution. Designer profiles
+                    build credibility. Each required different layout choices, but same underlying aesthetic.
+                </p>
+                <p><strong>Phase 3: Component System</strong></p>
+                <p>
+                    Six months into the project—just kidding, we did this in hours—but it felt right.
+                    We extracted reusable components: <code>.section</code> for consistent 6rem gaps,
+                    <code>.card</code> for all card-like content blocks,
+                    <code>.card-grid</code> for layouts,
+                    <code>.btn</code> and <code>.link</code> for interactions.
+                    Suddenly every page felt like they were designed together, not assembled.
+                </p>
+                <img src="images/collaboration-component-system.jpg"
+                     alt="Visual guide showing reusable component classes: section spacing, card styling, button variants" />
+            </section>
+
+            <section class="subsection section">
+                <h2>The Hard Problem: Making Minimalism Warm</h2>
+                <p>
+                    Every iteration revealed a tension: minimalism can feel cold and austere if you&apos;re not
+                    careful. We&apos;d hit moments where the design felt “right” structurally but <em>wrong</em>
+                    emotionally.
+                </p>
+                <p><strong>Solution 1—Whitespace generosity.</strong> Instead of cramming content, we doubled
+                    section gaps and doubled card padding. Counterintuitive for “minimal,” but Nordic Minimalism
+                    isn&apos;t about <em>reduction</em>—it&apos;s about <em>restraint</em>. There&apos;s a
+                    difference. Reduction = less stuff. Restraint = less than you want, but no more than you need.
+                </p>
+                <p><strong>Solution 2—Color warmth.</strong> Sage green instead of clinical gray. Warm taupe for
+                    accents. Off-white backgrounds. Every color choice asked: “Would this exist in a Scandinavian
+                    forest or home?” If yes, we used it.
+                </p>
+                <p><strong>Solution 3—Typography breathing room.</strong> 1.7 line-height, 0.3px letter-spacing.
+                    Text feels like it&apos;s floating in comfortable space, not crammed into a box. You don&apos;t
+                    consciously notice it, but you <em>feel</em> the difference.
+                </p>
+            </section>
+
+            <section class="subsection section">
+                <h2>Mobile-First Reality</h2>
+                <p>
+                    Responsive design wasn&apos;t an afterthought. We built five breakpoints: 375px (mobile),
+                    768px (tablet), 1024px (tablet large), 1440px (desktop), and 1920px (cinema). At each size,
+                    we asked: Does this still feel Nordic? Does it still breathe?
+                </p>
+                <p>
+                    On mobile, we reduced margins not to half, but thoughtfully—section gaps became 2.5rem
+                    instead of 6rem. Cards still had 1.5rem padding. Navigation stacked vertically but links
+                    stayed readable. No horizontal scrolling anywhere. The aesthetic compressed but didn&apos;t break.
+                </p>
+                <img src="images\mobile-homepage.jpg"
+                     alt="Mobile view of homepage showing responsive navigation and stacked card layout" />
+            </section>
+
+            <section class="subsection section">
+                <h2>Metrics &amp; Reflection</h2>
+                <p><strong>By the numbers:</strong></p>
+                <ul>
+                    <li>5 HTML pages (index, about, timeline, designers, collaboration)</li>
+                    <li>1 comprehensive CSS file with base styles + 5 responsive breakpoints</li>
+                    <li>8 reusable component classes</li>
+                    <li>35+ refined color, spacing, and typography values</li>
+                    <li>3 major design iterations before “feels right”</li>
+                    <li>6+ designer profiles researched and written</li>
+                    <li>12 content sections written from design philosophy principles</li>
+                </ul>
+                <p><strong>What worked:</strong> Philosophy-first approach. Every decision traced back to
+                    Nordic values, not trends. Component system from day one. Responsive design built in,
+                    not bolted on. Real content, not placeholder text.
+                </p>
+                <p><strong>What was hard:</strong> Resisting the urge to add more. Every feature tempted:
+                    animations, filters, gradients, interactive elements. But Nordic Minimalism is about saying no.
+                    Each addition had to earn its place.
+                </p>
+                <img src="images/lighthouse.jpg"
+                     alt="Lighthouse performance report showing high scores for Performance, Accessibility, Best Practices, and SEO" />
+            </section>
+
+            <section class="subsection section">
+                <h2>Early vs. Final</h2>
+                <img src="images\home-v1.png"
+                     alt="Screenshot of the early homepage version with cold, corporate look" />
+                <img src="images\final-page.jpg"
+                     alt="Screenshot of the final homepage version with warm, Nordic Minimalism look" />
+                <img src="images\mobile-homepage.jpg"
+                     alt="Screenshot of the mobile view of the homepage, showing responsive layout" />
+                <img src="images/lighthouse.jpg"
+                     alt="Screenshot of Lighthouse report with high scores for performance, accessibility, best practices, and SEO" />
+                <p>
+                    Compare the early homepage to the final version. Same structure, but different
+                    <em>feeling</em>. Early: sterile, corporate, cold. Final: warm, breathing, inviting.
+                    The HTML structure changed maybe 5%. The CSS changed everything. That&apos;s where
+                    Nordic Minimalism lives—in the details. The padding that makes space feel intentional.
+                    The line-height that makes reading feel like conversation. The color that makes the
+                    screen feel like a Scandinavian cabin, not an office.
+                </p>
+            </section>
+
+            <section class="subsection section">
+                <h2>What This Taught Us</h2>
+                <p>
+                    Good design collaboration isn&apos;t about one person having a vision and another implementing
+                    it. It&apos;s about shared philosophy. You understood Nordic Minimalism deeply enough to push
+                    back when something didn&apos;t feel right. I understood code well enough to translate that
+                    feeling into specifics. Together, we iterated until the design felt <em>honest</em>—true to
+                    philosophy, not just aesthetically pleasing.
+                </p>
+                <p>
+                    The best part? Every decision is explainable. Why 6rem gaps? Because Nordic Minimalism values
+                    generous space. Why sage green? Because it exists in nature. Why 1.7 line-height? Because it&apos;s
+                    readable and calming. There&apos;s no arbitrary “I like this” anywhere.
+                </p>
+                <p>That&apos;s the kind of design work worth doing.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Nordic Minimalism Gallery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
